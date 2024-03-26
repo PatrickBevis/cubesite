@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: 'LTera';
-  src: url('./assets/fonts/LexendTera.ttf') format('ttf');
+  src: url('./assets/fonts/LexendTera.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Grotesk';
-  src: url('./assets/fonts/SpaceGrotesk.ttf') format('ttf');
+  src: url('./assets/fonts/SpaceGrotesk.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
