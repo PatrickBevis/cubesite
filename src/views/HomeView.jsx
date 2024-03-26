@@ -9,7 +9,17 @@ const HomeView = () => {
         {[...Array(3)].map((_, groupIndex) => (
           <div key={groupIndex} className="flex justify-center gap-3">
             {cubeData.slice(groupIndex * 3, groupIndex * 3 + 3).map((item) => (
-              <Card key={item.id} title={item.title} color={item.color} hover= {item.hover} hasLockIcon={item.hasLockIcon} />
+              <Card
+                key={item.id}
+                url={item.url}
+                title={item.title}
+                color={item.color}
+                hover={item.hover}
+                hasLockIcon={item.hasLockIcon}
+                hasLogo={item.hasLogo}
+                cursor={item.cursor}
+                animate={item.animate}
+              />
             ))}
           </div>
         ))}
