@@ -15,15 +15,6 @@ module.exports = {
     },
   },
   extend: {
-    animation: {
-      'slide-left': 'slideLeft 0.3s ease-out forwards',
-    },
-    keyframes: {
-      slideLeft: {
-        '0%': { transform: 'translateX(0)' },
-        '100%': { transform: 'translateX(-100px)' },
-      },
-    },
   },
   plugins: [],
 };
