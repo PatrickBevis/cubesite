@@ -7,20 +7,17 @@ const HomeView = () => {
   return (
     <div className="flex justify-center items-center h-screen gap-3">
       {/* ecran smartphone */}
-      <div className="block lg:hidden flex flex-col gap-1">
+      <div className="lg:hidden grid grid-cols-2 gap-3">
         {cubeData.map((i) => (
           <Link key={i.id} to={i.url}>
             <Card
               key={i.id}
               title={i.title}
-              text={i.text}
               color={i.color}
-              hover={i.hover}
-              hasLockIcon={i.hasLockIcon}
-              hasLogo={i.hasLogo}
+              hover={i.hover}       
               cursor={i.cursor}
               animate={i.animate}
-              rounded={i.rounded}
+              rounded= "rounded-3xl"
               nouv={i.nouv}
               display={i.display}
             />

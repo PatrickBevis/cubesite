@@ -6,15 +6,16 @@ import ProjectView from "../views/ProjectView";
 import BlogView from "../views/BlogView";
 import ContactView from "../views/ContactView.jsx";
 import AboutView from "../views/AboutView.jsx";
+import Navbar from "../components/navbar.jsx";
 
 const Routes = () => {
   return (
     <RoutesContainer>
       <Route path={URL.URL_HOME} element={<HomeView />} />
-      <Route path={URL.URL_PROJECT} element={<ProjectView />} />
-      <Route path={URL.URL_BLOG} element={<BlogView />} />
-      <Route path={URL.URL_CONTACT} element={<ContactView />} />
-      <Route path={URL.URL_ABOUT} element={<AboutView/>} />
+      <Route path={URL.URL_PROJECT} element={<Navbar><ProjectView /></Navbar>} />
+      <Route path={URL.URL_BLOG} element={<Navbar><BlogView /></Navbar>} />
+      <Route path={URL.URL_CONTACT} element={<Navbar><ContactView /></Navbar>} />
+      <Route path={URL.URL_ABOUT} element={<Navbar><AboutView/></Navbar>} />
     </RoutesContainer>
   );
 };
