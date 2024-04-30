@@ -40,6 +40,7 @@ export const cubeData = [
     rounded: "lg:rounded-bl-3xl",
     display: "lg:block",
   },
+  
   {
     id: 4,
     title: "CONTACT",

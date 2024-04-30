@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactView = () => {
   return (
-    <div className='bg-red-400'>
+    <div className=''>
       Hello Contact
     </div>
   )
