@@ -1,5 +1,5 @@
 import {
-  URL_PROJECT,
+  URL_PROJECTS,
   URL_BLOG,
   URL_CONTACT,
   URL_ABOUT,
@@ -24,7 +24,7 @@ export const cubeData = [
     title: "PROJETS",
     text: "Si vous aimez voir des trucs parfois commencés mais jamais finis!",
     hover: "lg:hover:scale-105",
-    url: URL_PROJECT,
+    url: URL_PROJECTS,
     cursor: "cursor-pointer",
     rounded: "lg:rounded-b-3xl",
     display: "lg:block",

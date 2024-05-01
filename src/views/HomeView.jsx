@@ -5,6 +5,8 @@ import { cubeData } from "../data/cubeData";
 
 const HomeView = () => {
   return (
+    <>
+   
     <div className="flex justify-center items-center h-screen gap-3">
       {/* ecran smartphone */}
       <div className="lg:hidden grid grid-cols-2 gap-3">
@@ -50,6 +52,8 @@ const HomeView = () => {
         ))}
       </div>
     </div>
+
+    </>
   );
 };
 

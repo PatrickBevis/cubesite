@@ -1,13 +1,12 @@
 import React from "react";
 import { RandomColor } from "./randomColor";
 import { FooterCats } from "../data/footerCats";
-import { socialData } from "../data/socialData";
 
 const Footer = () => (
   <>
     <footer className={`${RandomColor()}`}>
       <div className="mx-auto w-full max-w-screen-xl">
-        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           {FooterCats.map((category, index) => (
             <div key={index}>
               <h3 className="mb-6 text-sm font-bold font-lTera text-gray-900">
@@ -24,17 +23,7 @@ const Footer = () => (
               </ul>
             </div>
           ))}
-          <div className="px-4 py-6 flex items-center justify-center  border-gray-200">
-  <div className="flex justify-right space-x-4">
-    {socialData.map((social, index) => (
-      <a key={index} href={social.link[0].href} className="text-gray-900 ">
-        {React.cloneElement(social.link[0].icon, { size: 40 })}
-      </a>
-    ))}
-  </div>
-</div>
         </div>
-
       </div>
       <div class="px-4 py-6 flex items-center justify-center">
         <span className="text-gray-900 font-lTera">
