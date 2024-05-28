@@ -1,5 +1,4 @@
 import React from "react";
-
 import { AiOutlineLock } from "react-icons/ai";
 import Logo from "../assets/img/logo.png";
 import { RandomColor } from "./randomColor";
@@ -9,18 +8,23 @@ const Card = ({
   text,
   color,
   hover,
+  border,
   hasLockIcon,
   hasLogo,
   cursor,
   rounded,
   nouv,
-  display,
+  date
 }) => {
   const rColor = color !== "bg-gray-50" ? RandomColor() : "";
   const nouveau = nouv ? "NEW" : "";
+  const formatDate = (date) => {
+    const options = { year: '2-digit', month: 'numeric', day: 'numeric' };
+    return new Date(date).toLocaleDateString(undefined, options);
+  };
   return (
     <div
-      className={`relative block w-52 h-52 pl-3.5 pt-9 pr-2 border-4 border-gray-900 ${color} ${rounded} ${rColor} ${hover} ${cursor} ${nouveau} ${display}`}
+      className={`relative block w-full md:w-52 h-52 pl-3.5 pt-9 pr-2 ${border} ${color} ${rounded} ${rColor} ${hover} ${cursor}`}
     >
       {hasLogo && (
         <img
@@ -33,11 +37,14 @@ const Card = ({
         {nouveau}
       </p>
       <h3 className="font-bold text-24 font-lTera">{title}</h3>
-      <p className="text-16 opacity-0 hover:opacity-100">{text}</p>
+      <p className="text-16 pt-8 lg:pt-0 md:opacity-0 hover:opacity-100">{text}</p>
       {hasLockIcon && (
         <div className="absolute inset-0 flex justify-center items-center">
           <AiOutlineLock className="text-gray-900 w-20 h-20 " />
         </div>
+      )}
+      {date && (
+        <p className="absolute bottom-2 right-2 text-gray-500 font-bold text-16">{formatDate(date)}</p>
       )}
     </div>
   );

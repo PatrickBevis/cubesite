@@ -9,19 +9,16 @@ export const FooterCats = [
     ],
   },
   {
+    title: "LEGAL",
+    links: [{ text: "Mentions légales", href: "#" }],
+  },
+
+  {
     title: "RESEAUX",
     links: [
-      { text: "X", href: "https://twitter.com/PatrickBevis_", },
-      { text: "Instagram", href: "https://www.instagram.com/patrickbevis"},
-      { text: "Github", href: "https://github.com/PatrickBevis"},
+      { text: "X", href: "https://twitter.com/PatrickBevis_" },
+      { text: "Instagram", href: "https://www.instagram.com/patrickbevis" },
+      { text: "Github", href: "https://github.com/PatrickBevis" },
     ],
   },
-  {
-    title: "LEGAL",
-    links: [
-      { text: "Mentions légales", href: "#" },
-    ],
-  },
-  
-  
 ];

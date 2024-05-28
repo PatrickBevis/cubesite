@@ -1,11 +1,22 @@
 import React from 'react'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
+import { calculateAge } from '../components/age'
 const AboutView = () => {
+  const birthDateString = "1989-10-23"; // Votre date de naissance
+  const age = calculateAge(birthDateString);
   return (
     <>
     <Navbar />
-      Hello About
+    
+
+ 
+    <div>
+      <p>Mon âge est {age} ans.</p>
+    </div>
+  
+
+
       <Footer />
     </>
   )

@@ -22,7 +22,7 @@ const DarkModeToggle = () => {
       };
 
   return (
-    <button onClick={toggleDarkMode} className={`fixed bottom-10 right-10 z-10 p-4 border-4 border-black rounded-3xl ${RandomColor()}`}>
+    <button onClick={toggleDarkMode} className={`fixed bottom-20 right-10 z-50 p-4 border-4 border-black rounded-3xl ${RandomColor()}`}>
       {darkMode ? <LuSun size={50} /> : <LuMoon size={50} />}
     </button>
   );
