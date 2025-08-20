@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <>
-        <div className="app  bg-yellow-50  font-grotesk text-16 text-gray-900 min-h-screen">
+        <div className="app  bg-gray-800 font-grotesk text-16 text-gray-900 min-h-screen">
           <Routes />
           {/* <DarkModeToggle /> */}
         </div>

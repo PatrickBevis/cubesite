@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RandomColor } from './randomColor';
+import Button from './button';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -43,12 +43,7 @@ const Form = () => {
         />
       </div>
       <div className="flex justify-end mt-10">
-        <button
-          type="submit"
-          className={`p-4 border-4 border-black rounded-3xl ${RandomColor()}`}
-        >
-          Envoyer
-        </button>
+      <Button>Envoyer</Button>
       </div>
     </form>
   );
