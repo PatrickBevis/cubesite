@@ -62,7 +62,7 @@ const cardData = [
       <div className="md:flex md:justify-center md:items-center h-screen">
        
        
-        <div className="grid grid-cols-1 md:grid md:gap-6 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid md:gap-24 md:grid-cols-3 lg:grid-cols-3">
           {cardData.map((i) => (
             <Card
               key={i.id}

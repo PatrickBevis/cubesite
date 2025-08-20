@@ -1,7 +1,7 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes/Routes";
 import "./App.css";
-import DarkModeToggle from "./components/darkModeToggle";
+
 
 function App() {
   return (
