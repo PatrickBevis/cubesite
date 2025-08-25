@@ -12,7 +12,7 @@ const AboutView = () => {
 
  
     <div>
-      <p>Mon âge est {age} ans.</p>
+      <p className='text-gray-50'>Mon âge est {age} ans.</p>
     </div>
   
 

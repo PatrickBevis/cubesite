@@ -23,7 +23,7 @@ const HomeView = () => {
               border={i.border}       
               cursor={i.cursor}
               animate={i.animate}
-              nouv={i.nouv}
+             
             />
           </Link>
         ))}
@@ -40,12 +40,10 @@ const HomeView = () => {
                   title={i.title}
                   text={i.text}
                   color={i.color}
-                  hover={i.hover}
                   border={i.border}
                   hasLockIcon={i.hasLockIcon}
                   hasLogo={i.hasLogo}
                   cursor={i.cursor}
-                  animate={i.animate}
                   rounded={i.rounded}
                   nouv={i.nouv}
                 />

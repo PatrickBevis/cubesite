@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RandomColor } from "./randomColor";
 
-const Button = ({ children }) => {
+const Button = ({ children, className }) => {
   // Couleur initiale au montage
   const [colorButton, setcolorButton] = useState(RandomColor());
 
@@ -13,7 +13,7 @@ const Button = ({ children }) => {
   return (
     <button
       type="submit"
-      className={`p-4 border-4 border-black rounded-3xl ${colorButton}`}
+      className={`p-4 border-4 border-black rounded-3xl ${colorButton} ${className} text-lg font-bold`}
       onClick={handleClick}
     >
       {children}

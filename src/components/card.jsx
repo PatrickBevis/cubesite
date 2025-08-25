@@ -13,14 +13,20 @@ const Card = ({
   hasLogo,
   cursor,
   rounded,
-  nouv,
   date
 }) => {
   const rColor = color !== "bg-gray-50" ? RandomColor() : "";
-  const nouveau = nouv ? "NEW" : "";
   const formatDate = (date) => {
     const options = { year: '2-digit', month: 'numeric', day: 'numeric' };
     return new Date(date).toLocaleDateString(undefined, options);
+  };
+   const isNew = () => {
+    if (!date) return false;
+    const now = new Date();
+    const creationDate = new Date(date);
+    const diffInMs = now - creationDate;
+    const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+    return diffInDays <= 3;
   };
   return (
     <div
@@ -33,9 +39,11 @@ const Card = ({
           className="absolute inset-0 flex justify-center items-center"
         />
       )}
-      <p className="absolute top-2 animate-pulse text-16 font-bold text-gray-50">
-        {nouveau}
-      </p>
+       {isNew() && (
+        <p className="absolute bottom-2 border bg-gray-900 rounded-full text-16 font-bold text-gray-50 px-2 py-1">
+          N
+        </p>
+      )}
       <h3 className="font-bold text-24 font-lTera">{title}</h3>
       <p className="text-16 pt-8 lg:pt-0 md:opacity-0 hover:opacity-100">{text}</p>
       {hasLockIcon && (

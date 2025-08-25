@@ -16,7 +16,7 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit} className='p-24'>
       <div className="mb-4">
-        <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
+        <label htmlFor="name" className="block text-gray-50 font-bold mb-2">
           Nom
         </label>
         <input
@@ -30,7 +30,7 @@ const Form = () => {
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="message" className="block text-gray-700 font-bold mb-2">
+        <label htmlFor="message" className="block text-gray-50 font-bold mb-2">
           Message
         </label>
         <textarea
