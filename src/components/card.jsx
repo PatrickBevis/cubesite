@@ -1,26 +1,14 @@
 import React from "react";
-import { AiOutlineLock } from "react-icons/ai";
-import Logo from "../assets/img/logo.png";
+import Button from "./button";
 import { RandomColor } from "./randomColor";
 
-const Card = ({
-  title,
-  text,
-  color,
-  hover,
-  border,
-  hasLockIcon,
-  hasLogo,
-  cursor,
-  rounded,
-  date
-}) => {
+const Card = ({ title, text, color, border, rounded, date, image }) => {
   const rColor = color !== "bg-gray-50" ? RandomColor() : "";
   const formatDate = (date) => {
-    const options = { year: '2-digit', month: 'numeric', day: 'numeric' };
+    const options = { year: "2-digit", month: "numeric", day: "numeric" };
     return new Date(date).toLocaleDateString(undefined, options);
   };
-   const isNew = () => {
+  const isNew = () => {
     if (!date) return false;
     const now = new Date();
     const creationDate = new Date(date);
@@ -30,29 +18,32 @@ const Card = ({
   };
   return (
     <div
-      className={`relative block w-full md:w-52 h-52 pl-3.5 pt-9 pr-2 ${border} ${color} ${rounded} ${rColor} ${hover} ${cursor}`}
+      className={`relative block w-full md:w-64 h-96 bg-gray-50 ${border} ${rounded}`}
     >
-      {hasLogo && (
-        <img
-          src={Logo}
-          alt={title}
-          className="absolute inset-0 flex justify-center items-center"
-        />
-      )}
-       {isNew() && (
-        <p className="absolute bottom-2 border bg-gray-900 rounded-full text-16 font-bold text-gray-50 px-2 py-1">
-          N
-        </p>
-      )}
-      <h3 className="font-bold text-24 font-lTera">{title}</h3>
-      <p className="text-16 pt-8 lg:pt-0 md:opacity-0 hover:opacity-100">{text}</p>
-      {hasLockIcon && (
-        <div className="absolute inset-0 flex justify-center items-center">
-          <AiOutlineLock className="text-gray-900 w-20 h-20 " />
+      {image && (
+        <div className="w-full h-1/2">
+          <img
+            src="https://picsum.photos/400/200"
+            alt="Image aléatoire"
+            className=" w-full h-full rounded-t-3xl"
+          />
         </div>
       )}
+
+      <h3 className="font-bold pl-3.5 text-24 font-lTera">{title}</h3>
+      <p className="text-16 pt-8 pl-3.5 lg:pt-3">{text}</p>
       {date && (
-        <p className="absolute bottom-2 right-2 text-gray-500 font-bold text-16">{formatDate(date)}</p>
+        <p className="absolute bottom-2 right-2 text-gray-500 font-bold text-16">
+          {formatDate(date)}
+        </p>
+      )}
+      <div className="absolute pt-3 w-full flex justify-center">
+        <Button className="px-3 py-1 text-sm">Voir l'article</Button>
+      </div>
+      {isNew() && (
+        <p className="absolute bottom-2 left-2 border bg-gray-900 rounded-full text-16 font-bold text-gray-50 px-2 py-1">
+          N
+        </p>
       )}
     </div>
   );

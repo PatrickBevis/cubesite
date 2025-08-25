@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Card from "../components/card";
+import Card from "../components/homeCard";
 import { cubeData } from "../data/cubeData";
 import { mobAffData } from "../data/mobAffData";
 
